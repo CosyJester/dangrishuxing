@@ -1,7 +1,8 @@
 name: windows c bulid
 on: 
   schedule:
-    - cron: '*/1 * * * *'
+    - cron: '0 0 * * *'
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
@@ -16,4 +17,3 @@ jobs:
           run: cmake -B build -DCMAKE_BUILD_TYPE=Release
         - name: Build project
           run: cmake --build build --config Release --parallel
-
