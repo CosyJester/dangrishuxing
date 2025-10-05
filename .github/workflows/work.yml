@@ -18,7 +18,7 @@ jobs:
         - name: List files after compilation
           run: dir
         - name: runnnnnnnnnnn
-          run: dangrshuxing.exe
+          run: .\dangrshuxing.exe
         - name: quhui
           uses: actions/upload-artifact@v4
           with:
