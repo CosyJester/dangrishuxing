@@ -22,8 +22,8 @@ jobs:
         - name: quhui
           uses: softprops/action-gh-release@v2
           with:
-             tag_name: latest
-             name: quhui
+             tag_name: new
+             name: "new"
              files: shuxing.ics
              overwrite_files: true
           env:
