@@ -1,7 +1,7 @@
 name: windows c bulid
 on: 
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '*/1 * * * *'
 permissions:
   contents: write
 jobs:
