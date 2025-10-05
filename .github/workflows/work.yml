@@ -20,7 +20,7 @@ jobs:
         - name: runnnnnnnnnnn
           run: .\dangrshuxing.exe
         - name: quhui
-          uses: actions/upload-artifact@v4
+          uses: softprops/action-gh-release@v2
           with:
              tag_name: latest
              name: quhui
