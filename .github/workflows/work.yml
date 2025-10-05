@@ -22,5 +22,10 @@ jobs:
         - name: quhui
           uses: actions/upload-artifact@v4
           with:
-             name: output
-             path: shuxing.ics
+             tag_name: latest
+             name: quhui
+             files: shuxing.ics
+             overwrite_files: true
+          env:
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
