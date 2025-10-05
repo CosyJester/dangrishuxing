@@ -4,18 +4,16 @@ on:
     - cron: '0 0 * * *'
 permissions:
   contents: write
-  jobs:
-    run shuxing:
-    runs-on:windows-latest:
-  steps:
-    - name: Checkout shuxing
-      uses: actions/checkout@v4
-    - name: install msvc
-      uses: ilammy/msvc-dev-cmd@v1
-    - name: Configure with CMake
-      run: cmake -B build -DCMAKE_BUILD_TYPE=Release
-    - name: Build project
-      run: cmake --build build --config Release --parallel
-    - name: run c
-      run: c dangrishuxing.c
-    
+jobs:
+    run_shuxing:
+      runs-on: bwindows-latest
+      steps:
+        - name: Checkout shuxing
+          uses: actions/checkout@v4
+        - name: install msvc
+          uses: ilammy/msvc-dev-cmd@v1
+        - name: Configure with CMake
+          run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+        - name: Build project
+          run: cmake --build build --config Release --parallel
+
