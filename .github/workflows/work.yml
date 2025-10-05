@@ -7,13 +7,18 @@ permissions:
   contents: write
 jobs:
     run_shuxing:
-      runs-on: bwindows-latest
+      runs-on: windows-latest
       steps:
         - name: Checkout shuxing
           uses: actions/checkout@v4
         - name: install msvc
           uses: ilammy/msvc-dev-cmd@v1
         - name: cl dangrishuxing
-          run: cl dangrishusing.c
+          run: cl dangrishuxing.c
         - name: runnnnnnnnnnn
-          run: dangsishuxixng.exe
+          run: dangrishuxing.exe
+        - name: quhui
+          uses: actions/upload-artifact@v4
+          with:
+             name: output
+             path: shuxing.ics
